@@ -15,40 +15,54 @@
 </head>
 <body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen selection:bg-cyan-500 selection:text-slate-950">
 
-    <!-- Header -->
-    <nav class="border-b border-slate-800 bg-slate-950/80 backdrop-blur-md fixed top-0 w-full z-50">
+    <!-- Header / Navbar -->
+    <nav class="border-b border-slate-800 bg-slate-950/90 backdrop-blur-md fixed top-0 w-full z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center space-x-2">
                 <div class="p-2 bg-cyan-950 border border-cyan-700 rounded-lg">
                     <i data-lucide="bot" class="w-6 h-6 text-cyan-400"></i>
                 </div>
-                <span class="text-xl font-bold text-white tracking-tight">ContractorAI MY</span>
+                <span class="text-lg sm:text-xl font-bold text-white tracking-tight">ContractorAI MY</span>
             </a>
-            <div class="flex items-center space-x-6 text-sm font-medium">
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
                 <a href="index.html" class="text-slate-400 hover:text-white transition">Home</a>
                 <a href="contact.html" class="text-cyan-400 font-semibold">Contact Us</a>
                 <a href="index.html#pricing" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2 rounded-lg font-bold text-sm transition">View Offer</a>
             </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-6 space-y-3">
+            <a href="index.html" class="block py-2 text-slate-300 hover:text-cyan-400 font-medium text-base">Home</a>
+            <a href="contact.html" class="block py-2 text-cyan-400 font-semibold text-base">Contact Us</a>
+            <a href="index.html#pricing" class="block w-full text-center bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-4 py-2.5 rounded-lg font-bold text-sm transition mt-2">View Offer</a>
         </div>
     </nav>
 
     <!-- Main Content Area -->
-    <main class="flex-grow pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
-        <div class="text-center mb-12">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">Get in Touch</h1>
-            <p class="text-slate-400 mt-3 text-lg">Have questions about setting up your AI receptionist? Reach out to our team.</p>
+    <main class="flex-grow pt-28 sm:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full">
+        <div class="text-center mb-8 sm:mb-12">
+            <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">Get in Touch</h1>
+            <p class="text-slate-400 mt-2 sm:mt-3 text-sm sm:text-lg">Have questions about setting up your AI receptionist? Reach out to our team.</p>
         </div>
 
-        <div class="grid md:grid-cols-12 gap-8 items-start">
+        <div class="grid md:grid-cols-12 gap-6 sm:gap-8 items-start">
             <!-- Contact Details Sidebar -->
-            <div class="md:col-span-5 bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-6">
+            <div class="md:col-span-5 bg-slate-900 border border-slate-800 p-5 sm:p-6 rounded-2xl space-y-5 sm:space-y-6">
                 <div>
-                    <h3 class="text-lg font-bold text-white mb-4">Contact Information</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">We help Malaysian HVAC, roofing, and trade contractors automate their inbound phone bookings.</p>
+                    <h3 class="text-base sm:text-lg font-bold text-white mb-2 sm:mb-4">Contact Information</h3>
+                    <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">We help Malaysian HVAC, roofing, and trade contractors automate their inbound phone bookings.</p>
                 </div>
                 
-                <div class="space-y-4 text-sm">
-                    <div class="flex items-center space-x-3 text-slate-300">
+                <div class="space-y-3 sm:space-y-4 text-xs sm:text-sm">
+                    <div class="flex items-center space-x-3 text-slate-300 break-all">
                         <i data-lucide="mail" class="w-5 h-5 text-cyan-400 flex-shrink-0"></i>
                         <span>zoomeyee@gmail.com</span>
                     </div>
@@ -64,30 +78,30 @@
             </div>
 
             <!-- Simple Contact Form -->
-            <div class="md:col-span-7 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-                <form action="#" method="POST" class="space-y-5" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you within 24 hours.');">
+            <div class="md:col-span-7 bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl">
+                <form action="#" method="POST" class="space-y-4 sm:space-y-5" onsubmit="event.preventDefault(); alert('Message sent! We will get back to you within 24 hours.');">
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Company Name</label>
-                        <input type="text" required placeholder="e.g. Pro Aircon & Heating Sdn Bhd" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                        <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2">Company Name</label>
+                        <input type="text" required placeholder="e.g. Pro Aircon & Heating Sdn Bhd" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 sm:px-4 sm:py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Your Email</label>
-                        <input type="email" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
+                        <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2">Your Email</label>
+                        <input type="email" required placeholder="name@company.com" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 sm:px-4 sm:py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-slate-300 mb-2">Message</label>
-                        <textarea rows="4" required placeholder="Tell us about your current call volume or service inquiry..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm"></textarea>
+                        <label class="block text-xs sm:text-sm font-medium text-slate-300 mb-1.5 sm:mb-2">Message</label>
+                        <textarea rows="4" required placeholder="Tell us about your current call volume or service inquiry..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3.5 py-2.5 sm:px-4 sm:py-3 text-white focus:outline-none focus:border-cyan-500 transition text-sm"></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3.5 rounded-lg transition text-sm">Send Inquiry</button>
+                    <button type="submit" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3 sm:py-3.5 rounded-lg transition text-sm">Send Inquiry</button>
                 </form>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800 py-8 bg-slate-950 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 text-center space-y-4">
-            <div class="flex justify-center space-x-8 text-sm font-medium text-slate-400">
+    <footer class="border-t border-slate-800 py-6 sm:py-8 bg-slate-950 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center space-y-3 sm:space-y-4">
+            <div class="flex justify-center space-x-6 sm:space-x-8 text-sm font-medium text-slate-400">
                 <a href="index.html" class="hover:text-cyan-400 transition">Home</a>
                 <a href="contact.html" class="hover:text-cyan-400 transition">Contact Us</a>
             </div>
@@ -95,9 +109,14 @@
         </div>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Mobile Menu Script & Lucide Icons -->
     <script>
         lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
